@@ -1,5 +1,5 @@
 <div class="article-details">
-    {{ if .Params.categories }}
+    <!-- {{ if .Params.categories }}
     <header class="article-category">
         {{ range (.GetTerms "categories") }}
             <a href="{{ .RelPermalink }}" {{ with .Params.style }}style="background-color: {{ .background }}; color: {{ .color }};"{{ end }}>
@@ -7,13 +7,13 @@
             </a>
         {{ end }}
     </header>
-    {{ end }}
+    {{ end }} -->
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="{{ .RelPermalink }}">
+            <!-- <a href="{{ .RelPermalink }}"> -->
                 {{- .Title -}}
-            </a>
+            <!-- </a> -->
         </h2>
     
         {{ with .Params.description }}
@@ -23,10 +23,10 @@
         {{ end }}
     </div>
 
-    {{ $showReadingTime := .Params.readingTime | default (.Site.Params.article.readingTime) }}
-    {{ $showDate := not .Date.IsZero }}
-    {{ $showFooter := or $showDate $showReadingTime }}
-    {{ if $showFooter }}
+    <!-- {{ $showReadingTime := .Params.readingTime | default (.Site.Params.article.readingTime) }} -->
+    <!-- {{ $showDate := not .Date.IsZero }} -->
+    <!-- {{ $showFooter := or $showDate $showReadingTime }} -->
+    <!-- {{ if $showFooter }}
     <footer class="article-time">
         {{ if $showDate }}
             <div>
@@ -46,9 +46,9 @@
             </div>
         {{ end }}
     </footer>
-    {{ end }}
+    {{ end }} -->
 
-    {{ if .IsTranslated }}
+    <!-- {{ if .IsTranslated }}
         <footer class="article-translations">
             {{ partial "helper/icon" "language" }}
             <div>
@@ -57,5 +57,5 @@
                 {{ end }}
             </div>
         </footer>
-    {{ end }}
+    {{ end }} -->
 </div>
